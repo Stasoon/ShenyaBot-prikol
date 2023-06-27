@@ -10,7 +10,8 @@ COPY . .
 # Установка зависимостей
 RUN sudo pip install --upgrade pip
 RUN sudo pip install virtualenv
-RUN venv/Scripts/activate
+RUN python -m venv venv
+RUN source venv/Scripts/activate
 RUN pip install -r requirements.txt
 
 # команда, выполняемая при запуске контейнера
