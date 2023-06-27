@@ -1,15 +1,20 @@
 import random
+import os
 import asyncio
 
 from aiogram import Dispatcher, Bot, types, executor
 from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
+from dotenv import find_dotenv, load_dotenv
 
 from keep_alive import keep_alive
 
 
-TOKEN = "5980678332:AAEIdKBppGcuYqWiVpYYBa2JTFtfcrMfxjI"
+load_dotenv(find_dotenv())
 
-bot = Bot(token=TOKEN)
+
+TOKEN = os.getenv('BOT_TOKEN')
+
+bot = Bot(token=TOKEN, parse_mode='html')
 dp = Dispatcher(bot)
 
 yes_kb = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add('Да!')

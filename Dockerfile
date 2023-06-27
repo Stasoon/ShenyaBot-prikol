@@ -8,6 +8,8 @@ WORKDIR /bot
 COPY . .
 
 # Установка зависимостей
+RUN pip install venv
+RUN source venv/Scripts/activate
 RUN pip install -r requirements.txt
 
 # команда, выполняемая при запуске контейнера
