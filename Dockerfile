@@ -11,7 +11,7 @@ COPY . .
 RUN pip install --upgrade pip
 RUN pip install virtualenv
 RUN python -m venv venv
-RUN source venv/Scripts/activate
+RUN venv/Scripts/activate
 RUN pip install -r requirements.txt
 
 # команда, выполняемая при запуске контейнера
