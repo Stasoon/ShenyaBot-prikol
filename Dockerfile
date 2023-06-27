@@ -8,9 +8,9 @@ WORKDIR /bot
 COPY . .
 
 # Установка зависимостей
-RUN pip install --upgrade pip
-RUN pip install virtualenv
-RUN source venv/Scripts/activate
+RUN sudo pip install --upgrade pip
+RUN sudo pip install virtualenv
+RUN venv/Scripts/activate
 RUN pip install -r requirements.txt
 
 # команда, выполняемая при запуске контейнера
