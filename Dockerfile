@@ -8,7 +8,8 @@ WORKDIR /bot
 COPY . .
 
 # Установка зависимостей
-RUN pip install venv
+RUN pip install --upgrade pip
+RUN pip install virtualenv
 RUN source venv/Scripts/activate
 RUN pip install -r requirements.txt
 
