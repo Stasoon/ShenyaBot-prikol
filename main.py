@@ -12,7 +12,7 @@ from keep_alive import keep_alive
 load_dotenv(find_dotenv())
 
 
-TOKEN = os.getenv('BOT_TOKEN')
+TOKEN = str(os.getenv('BOT_TOKEN'))
 
 bot = Bot(token=TOKEN, parse_mode='html')
 dp = Dispatcher(bot)
