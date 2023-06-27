@@ -1,5 +1,5 @@
 # установка базового образа (host OS)
-FROM python:3.8
+FROM FROM python:3.8-slim
 
 # Установка рабочей директории в контейнере
 WORKDIR /bot
