@@ -8,8 +8,8 @@ WORKDIR /bot
 COPY . .
 
 # Установка зависимостей
-RUN sudo pip install --upgrade pip
-RUN sudo pip install virtualenv
+RUN pip install --upgrade pip
+RUN pip install virtualenv
 RUN python -m venv venv
 RUN source venv/Scripts/activate
 RUN pip install -r requirements.txt
