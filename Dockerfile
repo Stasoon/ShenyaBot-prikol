@@ -9,9 +9,6 @@ COPY . .
 
 # Установка зависимостей
 RUN pip install --upgrade pip
-RUN pip install virtualenv
-RUN python -m venv venv
-RUN venv\Scripts\activate
 RUN pip install -r requirements.txt
 
 # команда, выполняемая при запуске контейнера
